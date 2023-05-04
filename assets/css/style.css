@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family-Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald&display=swap');
 
 * {
     margin: 0;
@@ -31,7 +31,7 @@ h2 {
 /* navigation links */
 
 #menu {
-    font-size: 100%;
+    font-size: 110%;
     letter-spacing: 4px;
 }
 
@@ -59,21 +59,19 @@ h2 {
     border-bottom: 1px solid #3a3a3a;
 }
 
-/* navigation links */
+/* hero image and cover text */
 
 #hero-outer {
     height: 600px;
     width: 100%;
     overflow: hidden;
+
     position: relative;
 }
 
-#cover-text {
-    color: #fff
-}
-
+#cover-text,
 #cover-text h2 {
-    color: #fff
+    color: #fff;
 }
 
 #hero-image {
@@ -82,7 +80,6 @@ h2 {
     background: url('../images/hero-image.webp') no-repeat center center;
 
     /* animates zoom effect on loading page */
-
     animation-name: hero-zoom;
     animation-duration: 5s;
     animation-fill-mode: forwards;
@@ -190,7 +187,7 @@ hr {
 }
 
 #circle-cover-bg {
-    background: url(../images/ethos-center-image.jpg) no-repeat center center;
+    background: url('../images/ethos-center-image.jpg') no-repeat center center;
     height: 100%;
     border-radius: 50%;
 }
@@ -198,7 +195,7 @@ hr {
 /* event times */
 
 #times {
-    background-image: url('../images/dublin-city.webp');
+    background-image: url('../images/times-background.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -258,7 +255,7 @@ footer {
 
 /* Media queries */
 
-/* For large to medium screens size from 1200px wide and down */
+/* For larger to medium screens size from 1200px wide and down */
 @media screen and (max-width: 1200px) {
     #club-ethos {
         width: 65%;
@@ -267,20 +264,20 @@ footer {
     }
 
     #welcome {
-        padding: 30px;
+        padding: 30px 0;
         margin: 0;
     }
 
     #left-about,
-    right-about {
-        margin: 100%;
+    #right-about {
+        width: 100%;
         float: left;
         padding: 0;
     }
 
     #center-about {
         clear: both;
-        margin: 100%;
+        width: 100%;
         float: left;
         padding: 0;
     }
@@ -291,13 +288,39 @@ footer {
 }
 
 /* For medium screen sizes from 950px wide and down */
-@media screen and (max-width: 90px) {
-
+@media screen and (max-width: 950px) {
     #menu {
         clear: left;
         float: left;
         margin-left: 30px;
         margin-bottom: 20px;
         line-height: 25px;
+    }
+
+    #cover-text {
+        left: 0;
+    }
+
+    #club-ethos {
+        width: 90%;
+        height: 1200px;
+        margin: 0 auto;
+    }
+
+    .left-about-heading,
+    .right-about-heading {
+        width: inherit;
+    }
+
+    .left-about-heading h2,
+    .right-about-heading h2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .left-about-heading p,
+    .right-about-heading p {
+        text-align: center;
+        padding: 0 20px;
     }
 }
